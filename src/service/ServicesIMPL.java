@@ -21,11 +21,11 @@ public class ServicesIMPL implements Services {
 		return true;
 	}
 	
-	public boolean addShopkeer(int id, String name) {
+	public boolean addShopkeer(int id, String name) { // return true if shopkeeper added successfully
 		return false;
 	}
 	
-	public boolean addCustomer(int id, String  name, long contact, String mail) {
+	public boolean addCustomer(int id, String  name, long contact, String mail) {// return true if customer added successfully
 		return false;
 	}
 	
