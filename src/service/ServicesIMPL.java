@@ -17,6 +17,18 @@ public class ServicesIMPL implements Services {
 	ArrayList<Product> pd = rp.getProduct(); // fetching the Product list
 	
 	
+	public boolean addProduct(int id, String name, long price, long mrp) {// return true if added successfully
+		return true;
+	}
+	
+	public boolean addShopkeer(int id, String name) {
+		return false;
+	}
+	
+	public boolean addCustomer(int id, String  name, long contact, String mail) {
+		return false;
+	}
+	
 	@Override
 	public boolean isAShopkeeper(int id) {// to check Shopkeeper is available
 		boolean result = getShopkeeper(id) == null ? false : true;
@@ -67,5 +79,6 @@ public class ServicesIMPL implements Services {
 		}
 		return sp; //returning the value if sp even if it is null
 	}
+	
 
 }
