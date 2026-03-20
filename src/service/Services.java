@@ -16,7 +16,7 @@ public interface Services {
 	boolean addShopkeer(int id, String name);
 	boolean addCustomer(int id, String  name, long contact, String mail);
 	
-	Product editCustomer(int id, String name, long contact, String mail);
+	Customer editCustomer(int id, String name, long contact, String mail);
 	Shopkeeper editShopkeeper(int id, String name);
 	Product editProduct(int id, String name, long price, long mrp);
 }

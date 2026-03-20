@@ -160,7 +160,7 @@ public class Shop_management {
 				if(service.isACustomer(id))
 				{
 					Customer c = service.getCustomer(id);
-					System.out.println(c.getId()+" "+ c.getName()+ " " + c.getContact() + " " + c.getMail());=
+					System.out.println(c.getId()+" "+ c.getName()+ " " + c.getContact() + " " + c.getMail());
 				}else {
 					System.out.println("ID Not Found");
 				}
