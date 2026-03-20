@@ -18,15 +18,15 @@ public class ServicesIMPL implements Services {
 	
 	
 	public boolean addProduct(int id, String name, long price, long mrp) {// return true if added successfully
-		return true;
+		return isAProduct(id) ? false : pd.add(new Product(id,name, price, mrp));
 	}
 	
 	public boolean addShopkeer(int id, String name) { // return true if shopkeeper added successfully
-		return false;
+		return isAShopkeeper(id) ? false : al.add(new Shopkeeper(id, name));
 	}
 	
 	public boolean addCustomer(int id, String  name, long contact, String mail) {// return true if customer added successfully
-		return false;
+		return isACustomer(id) ? false : cl.add(new Customer(id, name, contact, mail));
 	}
 	
 	@Override
@@ -78,6 +78,30 @@ public class ServicesIMPL implements Services {
 			}			
 		}
 		return sp; //returning the value if sp even if it is null
+	}
+	
+	//edit customer, shopkeeper, and product
+	
+	public Customer editCustomer(int id, String name, long contact, String mail) {
+		Customer c = getCustomer(id); //fetching the customer from id
+		c.setName(name);
+		c.setContact(contact);
+		c.setMail(mail);
+		return c;
+	}
+	
+	public Shopkeeper editShopkeeper(int id, String name) { //shopkeeper edit method
+		Shopkeeper s = getShopkeeper(id);
+		s.setName(name);
+		return s;
+	}
+	
+	public Product editProduct(int id, String name, long price, long mrp) {
+		Product p = getProduct(id);
+		p.setMRP(mrp);
+		p.setName(name);
+		p.setPrice(price);
+		return p;
 	}
 	
 
