@@ -125,17 +125,42 @@ public class Shop_management {
 				System.out.println("Enter the id of Shopkeeper");
 				id= sc.nextInt(); 
 				if(service.isAShopkeeper(id)) {
-					
+					System.out.println("Enter the name of shopkeeper");
+					name = sc.next();
+					Shopkeeper s = service.editShopkeeper(id, name);
+					System.out.println("name  updated");
+					System.out.println(s.getId()+ " " + s.getName());
 				}
+				else {
+					System.out.println("Id Not Found");
+				}
+				
 				break;
 				
 			case 9:
+				System.out.println("Enter the id of Product");
+				id= sc.nextInt(); 
+				if(service.isAProduct(id)) {
+					System.out.println("Enter the name, price, mrp of product");
+					name = sc.next();
+					price = sc.nextLong();
+					mrp = sc.nextLong();
+					Product p = service.editProduct(id, name, price, mrp);
+					System.out.println("Product Added");
+					System.out.println(p.getId()+ " " + p.getName());
+				}
+				else {
+					System.out.println("Id Not Found");
+				}
 				break;
 				
 			case 10:
 				break;
 				
 			case 11:
+				break;
+				
+			case 12:
 				break;
 				
 			}
