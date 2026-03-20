@@ -111,7 +111,7 @@ public class Shop_management {
 					Customer customer = service.editCustomer(id, name, contact, mail);
 					System.out.println(customer.getId()+" "+customer.getName()+" "+ customer.getContact() + " "+ customer.getMail());
 					}
-					catch(InputMismatchException ie) {
+					catch(InputMismatchException ie) { // catching InputMismatchException from the try block
 						System.out.println("Please Enter proper data type");
 					}
 					
@@ -122,6 +122,11 @@ public class Shop_management {
 				break;
 				
 			case 8: 
+				System.out.println("Enter the id of Shopkeeper");
+				id= sc.nextInt(); 
+				if(service.isAShopkeeper(id)) {
+					
+				}
 				break;
 				
 			case 9:
